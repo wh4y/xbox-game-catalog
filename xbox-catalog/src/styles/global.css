@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+details[open] .arrow-icon {
+    @apply rotate-0;
+}
+
+details[open] summary {
+    @apply bg-gray-100 shadow;
+}
+
+summary {
+    @apply list-none;
+}
+
+summary::-webkit-details-marker {
+    @apply hidden;
+}
+
+
+.available-radio:checked ~ .available-label {
+    @apply bg-gray-300
+}
+
+.game-link:before {
+    @apply block absolute w-full h-full cursor-pointer top-0 left-0;
+    content: '';
+}
+
+.game-container:hover .game-img {
+    @apply scale-105 duration-200;
+}
+
+.game-title {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.search-games-input {
+    outline: 1px solid #6B7280;
+    outline-offset: 1px;
+    -moz-outline-radius: 0;
+}
+
+.search-games-input:focus {
+    outline-width: 3px;
+    outline-offset: 0;
+}
